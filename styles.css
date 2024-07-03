@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Üst Kısım */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header button, .header label {
+    margin-right: 10px;
+}
+
+#newUserBtn {
+    padding: 5px 15px;
+    background-color: #007CBA;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#newUserBtn:hover {
+    background-color: #56A7CF;
+}
+
+.hide-disabled {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Save button'u sola iter */
+}
+
+#saveUserBtn {
+    padding: 5px 15px;
+    background-color: #007CBA;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#saveUserBtn:hover {
+    background-color: #56A7CF;
+}
+
+/* Alt Kısım */
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Kullanıcı Listesi */
+.user-list {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-list table, .user-list th, .user-list td {
+    border: 1px solid #ddd;
+}
+
+.user-list th {
+    background-color: #007CBA; /* Mavi başlık rengi */
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-list td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Kullanıcı Formu */
+.user-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-header {
+    background-color: #F5F5F5;
+    padding: 10px;
+    text-align: left;
+}
+
+.form-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.form-body {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-body form {
+    display: grid;
+    grid-template-columns: auto 1fr; /* İlk sütun label için, ikinci sütun input için */
+    gap: 10px; /* Etiketler ve inputlar arasındaki boşluk */
+    align-items: center; /* Dikey olarak ortalar */
+}
+
+.form-body label {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0; /* Etiketlerin altındaki varsayılan boşluğu kaldırır */
+    display: flex;
+    align-items: center; /* Label ve inputu hizalar */
+    gap: 10px; /* Label ve input arasındaki boşluk */
+}
+
+.form-body input[type="text"],
+.form-body input[type="email"],
+.form-body input[type="password"],
+.form-body select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.form-body select {
+    background-color: #fff;
+    color: #333;
+}
+
+.form-body select option:checked {
+    background-color: #007CBA; /* Seçilen seçenek mavi */
+    color: #fff;
+}
+
+
+
+

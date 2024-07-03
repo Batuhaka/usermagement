@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Üst Kısım -->
+        <div class="header">
+            <div class="header-left">
+                <button id="newUserBtn">+ New User</button>
+                <label class="hide-disabled">
+                    <input type="checkbox" id="hideDisabled"> Hide Disabled User
+                </label>
+            </div>
+            <button id="saveUserBtn">Save User</button>
+        </div>
+
+        <!-- Alt Kısım -->
+        <div class="main-content">
+            <!-- Sol Sütun: Kullanıcı Listesi -->
+            <div class="user-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Enabled</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <tr>
+                            <td>1</td>
+                            <td>AdminUser</td>
+                            <td>admin@piworks.net</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Test User</td>
+                            <td>testuser@piworks.net</td>
+                            <td>true</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sağ Sütun: Kullanıcı Formu -->
+            <div class="user-form">
+                <!-- Form Başlığı -->
+                <div class="form-header">
+                    <h3>New User</h3>
+                </div>
+                <!-- Form Alanı -->
+                <div class="form-body">
+                    <form id="userForm">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                        
+                        <label for="displayName">Display Name:</label>
+                        <input type="text" id="displayName" required>
+                        
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone">
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        
+                        <label for="userRoles">User Roles:</label>
+                        <select id="userRoles" required>
+                            <option value="Guest">Guest</option>
+                            <option value="Admin">Admin</option>
+                            <option value="SuperAdmin">SuperAdmin</option>
+                        </select>
+                        
+                        <label for="enabled">Enabled:</label>
+                        <input type="checkbox" id="enabled">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
